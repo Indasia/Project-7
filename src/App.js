@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import { 
+  BrowserRouter,
+  Route,
+  Switch
+} from 'react-router-dom';
 import './App.css';
+import apiKey from './config'
 
-function App() {
+// import components
+import Header from './Header';
+import Gallery from './Gallery';
+import GalleryItem from './Nav';
+import Nav from './Header';
+import Form from './Form';
+import NotFound from './NotFound';
+
+class App extends Component { 
+
+
+};
+
+
+
+render() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="container">
+        <Header />
+
+        {/*   
+        
+        // switch will render the first route that matches the URL
+        <Switch>
+        // instruct the route to render the component only when it matches the exact route
+        <Route exact path="/about" render={ () => <About />} /> 
+        <Route component={NotFound} />
+        </Switch>
+      
+      */}
+
+      </div>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
