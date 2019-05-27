@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import axios from 'axios';
-import apiKey from './config'
+import apiKey from './config';
 
 // import components
 import Header from './components/Header';

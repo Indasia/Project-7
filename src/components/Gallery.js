@@ -6,16 +6,18 @@ const Gallery = props => {
     
     const results = props.data;
     let photos;
+
     if (results.length > 0) {
-        photos = results.map(photo => <GalleryItem url={galleryItem.images.fixed.height.url} key={galleryItem.id} />);
+        // where do i find gallery url?
+        photos = results.map(photo => <GalleryItem url={photo.images.fixed.height.url} key={photo.id} />);
     } else {
-        photos = <NotFound />
+        photos = <NotFound />;
     }
 
     return (
-        <ul className="photo-gallery">
-            {photos}
-        </ul>
+        <div className="photo-gallery">
+            <ul>{photos}</ul>
+        </div>
     );
 }
 
