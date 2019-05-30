@@ -8,8 +8,12 @@ const Gallery = props => {
     let photos;
 
     if (results.length > 0) {
-        // where do i find gallery url?
-        photos = results.map(photo => <GalleryItem url={photo.images.fixed.height.url} key={photo.id} />);
+        // is my url right?
+        photos = results.map(photo => (
+            <GalleryItem url={`https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`}
+                key={photo.id}
+            />
+        ));
     } else {
         photos = <NotFound />;
     }

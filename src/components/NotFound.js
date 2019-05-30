@@ -4,7 +4,8 @@ import React from 'react';
 const NotFound = () => {
     return (
         <li className="notFound">
-            <h2>Page Not Found</h2>
+            <h3>Page Not Found</h3>
+            <h1>The image you are looking for was not found. Try searching for something else.</h1>
         </li>
     );
 };
