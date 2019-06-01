@@ -1,6 +1,6 @@
 import React from 'react';
-
-// 404 error
+ 
+// 404 error when images can't be found
 const NotFound = () => {
     return (
         <li className="notFound">

@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 
 export default class Form extends Component{
-
+    // a search component that allows user to search for photos
     state = {
         searchText: ''
     }
 
+    // add value to state
     onSearchChange = e => {
         this.setState({ searchText: e.target.value });
     }
 
+    // handle the submitting of queries
     handleSubmit = e => {
         this.props.history.push(
             `/search/${this.state.searchText}`
@@ -19,6 +21,7 @@ export default class Form extends Component{
         e.currentTarget.reset();
     }
 
+    // show it on the page
     render() {
         return (
             <form className="search-form" onSubmit={this.handleSubmit}>
