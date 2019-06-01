@@ -4,7 +4,7 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
-import './App.css';
+import './index.css';
 import axios from 'axios';
 import apiKey from './config';
 
@@ -32,9 +32,9 @@ export default class App extends Component {
   componentDidMount() {
     // load photos as soon as app loads
     this.performSearch();
-    this.performSearch('angels');
-    this.performSearch('crystals');
-    this.performSearch('unicorns');
+    this.performSearch("angels");
+    this.performSearch("crystals");
+    this.performSearch("unicorns");
   }
 
   // fetch Flicker API data

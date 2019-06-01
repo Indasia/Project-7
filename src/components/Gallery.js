@@ -19,7 +19,7 @@ const Gallery = props => {
     }
 
     return (
-        <div className="photo-gallery">
+        <div className="photo-container">
             <ul>{photos}</ul>
         </div>
     );

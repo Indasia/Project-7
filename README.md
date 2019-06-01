@@ -13,7 +13,7 @@ This project uses the React library, JavaScript, and JSX to build an image galle
 - Run npm start
 - View http://localhost:3000 in the browser
 
-# Technologies
+## Technologies
 - JavaScript
 - React
 - JXL
