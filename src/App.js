@@ -84,30 +84,7 @@ export default class App extends Component {
             <Route exact path="/unicorns" render={() => <Gallery title="Unicorns" data={this.state.unicorns} />} />
             <Route exact path="/search/:topic" render={() => <Gallery data={this.state.results} />} />
 
-
-
-
-            {/* <Route exact path="/angels" render={() =>
-              (this.state.loading)
-                ? <p>Loading...</p>
-                : <Gallery data={this.state.angels} query="angels" />
-            } />
-            <Route exact path="/crystals" render={() =>
-              (this.state.loading)
-                ? <p>Loading...</p>
-                : <Gallery data={this.state.crystals} query="crystals" />
-            } />
-            <Route exact path="/unicorns" render={() =>
-              (this.state.loading)
-                ? <p>Loading...</p>
-                : <Gallery data={this.state.unicorns} query="unicorns" />
-            } />
-            <Route path="/:topic" render={() =>
-              (this.state.loading)
-                ? <p>Loading...</p>
-                : <Gallery data={this.state.results} />
-            } />
-            */}
+            <Route component={NotFound} />
 
         </Switch>
         </div>

@@ -5,9 +5,9 @@ const NotFound = () => {
     return (
         <li className="notFound">
             <h3>Page Not Found</h3>
-            <h1>The image you are looking for was not found. Try searching for something else.</h1>
+            <h1>There's nothing to see here people! Try searching for something else.</h1>
         </li>
     );
 };
 
-export default NotFound
+export default NotFound;
