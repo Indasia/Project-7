@@ -1,3 +1,28 @@
+## Description
+This project uses the React library, JavaScript, and JSX to build an image gallery using data from the Flicker API.
+
+## Setup
+- Download this reposition
+- Run npm install in your terminal
+- Apply for a non-commericial API key on the Flickr website
+- Create config.js file in the src folder
+- Once the config.js folder is created, insert the following code:
+  const apiKey = 'YOUR API KEY'; 
+  export default apiKey;
+- Inside of 'YOUR API KEY', add your non-commercial Flickr API key
+- Run npm start
+- View http://localhost:3000 in the browser
+
+# Technologies
+- JavaScript
+- React
+- JXL
+- Create React App
+- Axios API
+- HTML
+- CSS
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
