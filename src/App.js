@@ -44,17 +44,17 @@ export default class App extends Component {
       .then(response => {
         if (query === "angels") {
           this.setState({
-            sunsets: response.data.photos.photo,
+            angels: response.data.photos.photo,
             loading: false
           });
         } else if (query === "crystals") {
           this.setState({
-            angels: response.data.photos.photo,
+            crystals: response.data.photos.photo,
             loading: false
           });
         } else if (query === "unicorns") {
           this.setState({
-            rainbows: response.data.photos.photo,
+            unicorns: response.data.photos.photo,
             loading: false
           });
         } else {
