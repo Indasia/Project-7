@@ -11,7 +11,6 @@ import apiKey from './config';
 // import components
 import Header from './components/Header';
 import Gallery from './components/Gallery';
-import GalleryItem from './components/GalleryItem';
 import Nav from './components/Nav';
 import Form from './components/Form';
 import NotFound from './components/NotFound';
@@ -74,16 +73,16 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <div className="container">
+          <Route render={props => <Form {...props} onSearch={this.performSearch} />} />
           <Header />
 
       {/* switch will render the first route that matches the URL */}
         <Switch>
             {/* instruct the route to render the component only when it matches the exact route */}
-
             <Route exact path="/angels" render={() => <Gallery title="Angels" data={this.state.angels} />} />
             <Route exact path="/crystals" render={() => <Gallery title="Crystals" data={this.state.crystals} />} />
             <Route exact path="/unicorns" render={() => <Gallery title="Unicorns" data={this.state.unicorns} />} />
-            <Route exact path="/:topic" render={() => <Gallery data={this.state.photos} />} />
+            <Route exact path="/search/:topic" render={() => <Gallery data={this.state.results} />} />
 
 
 

@@ -1,12 +1,10 @@
 import React from 'react';
 import Nav from './Nav';
-import Form from './Form';
 
-const Header = props => {
+const Header = (props) => {
     return (
         <header>
-            <Form onSearch={props.onSearch} />
-            <Nav />
+            <Nav reset={props.reset}/>
         </header>
     );
 }
