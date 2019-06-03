@@ -11,7 +11,6 @@ import apiKey from './config';
 // import components
 import Header from './components/Header';
 import Gallery from './components/Gallery';
-import Nav from './components/Nav'
 import Form from './components/Form';
 import NotFound from './components/NotFound';
 import Home from './components/Home';
