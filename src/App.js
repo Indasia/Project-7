@@ -4,16 +4,17 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
-import './index.css';
+import './css/index.css';
 import axios from 'axios';
 import apiKey from './config';
 
 // import components
 import Header from './components/Header';
 import Gallery from './components/Gallery';
-import Nav from './components/Nav';
+import Nav from './components/Nav'
 import Form from './components/Form';
 import NotFound from './components/NotFound';
+import Home from './components/Home';
 
 export default class App extends Component {
 
@@ -78,6 +79,7 @@ export default class App extends Component {
       {/* switch will render the first route that matches the URL */}
         <Switch>
             {/* instruct the route to render the component only when it matches the exact route */}
+            <Route exact path="/" render={props => <Home title="Home" />} />
             <Route exact path="/angels" render={() => <Gallery title="Angels" data={this.state.angels} />} />
             <Route exact path="/crystals" render={() => <Gallery title="Crystals" data={this.state.crystals} />} />
             <Route exact path="/unicorns" render={() => <Gallery title="Unicorns" data={this.state.unicorns} />} />
